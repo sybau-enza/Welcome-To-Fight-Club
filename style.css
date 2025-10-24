@@ -382,4 +382,91 @@ header {
 .destroy-mode-active .fight-rule,
 .destroy-mode-active .character-image-box {
     animation: shake 0.1s linear infinite;
+
+}
+
+/* ======================= MOBILE RESPONSIVENESS (Max Width 768px) ======================= */
+@media (max-width: 768px) {
+    
+    /* Make the main title readable on mobile */
+    #movie-header h1 {
+        font-size: 4rem;
+    }
+    
+    /* Center all the main sections and make the text a bit smaller */
+    #sypnosis h2, 
+    #characters h2,
+    #rules-section h5 {
+        font-size: 3rem;
+    }
+
+    /* Fix character section layout */
+    .character-container {
+        /* Change from row (flex) to column stack */
+        flex-direction: column; 
+        /* Remove the huge negative margin that pushed content off-screen */
+        margin-left: 0; 
+        gap: 1.5rem;
+    }
+
+    /* Allow the description to take full width */
+    .character-description,
+    .character-description.tyler {
+        max-width: 100%;
+        padding: 0 10px; /* Add some padding */
+        text-align: center;
+    }
+
+    /* Stack image and details vertically */
+    .character-visuals,
+    .character-visuals.tyler {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    /* Adjust Narrator details */
+    .character-details {
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .character-details h3 {
+        padding-left: 0;
+    }
+
+    /* Adjust Tyler Durden details */
+    .character-details.tyler {
+        margin-left: 0; /* Remove negative margin */
+        text-align: center;
+    }
+
+    /* Center the unordered lists in the details boxes */
+    .character-details ul {
+        padding: 0;
+        list-style-position: inside;
+    }
+    
+    .character-details ul li {
+        white-space: normal;
+        margin: 5px 0;
+    }
+    
+    /* Center the image/GIF boxes */
+    .character-image-box,
+    .character-image-box.tyler {
+        left: 0; /* Remove negative positioning */
+        width: 180px; /* Make the images a bit smaller for mobile */
+        height: 180px;
+    }
+    
+    /* Make buttons and rules smaller */
+    #reveal-rule-btn,
+    #destroy-mode-btn {
+        font-size: 1.2rem;
+    }
+    
+    .fight-rule {
+        font-size: 1.5rem;
+    }
 }
