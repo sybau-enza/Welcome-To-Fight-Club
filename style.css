@@ -390,7 +390,9 @@ header {
     
     /* FIX: Force center the main content on mobile */
     #main-content {
-        margin: 0 auto; 
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
     }
     
     /* Make the main title readable on mobile */
@@ -475,3 +477,4 @@ header {
         font-size: 1.5rem;
     }
 }
+
