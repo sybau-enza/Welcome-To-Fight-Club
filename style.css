@@ -385,8 +385,13 @@ header {
 
 }
 
-/* ======================= MOBILE RESPONSIVENESS (Max Width 768px) ======================= */
+/* FOR MOBILE*/
 @media (max-width: 768px) {
+    
+    /* FIX: Force center the main content on mobile */
+    #main-content {
+        margin: 0 auto; 
+    }
     
     /* Make the main title readable on mobile */
     #movie-header h1 {
