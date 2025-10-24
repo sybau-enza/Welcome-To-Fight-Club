@@ -1,0 +1,385 @@
+@font-face {
+    font-family: 'FightThis';
+    src: url('fonts/FightThis.woff2') format('woff2'),
+          url('fonts/FightThis.woff')  format('woff');
+          font-weight: normal;
+          font-style: normal;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: black;
+    color: #ffffff;
+}
+
+h1 {
+   font-family: 'FightThis', serif;
+   font-style:normal;
+   font-weight: bolder;
+   font-size: larger;
+   color: #ec66a4;
+}
+
+p {
+   font-family:Arial, Helvetica, sans-serif;
+   color: whitesmoke;
+}
+
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
+    cursor: pointer;
+}
+
+#splash-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.splash-content {
+    text-align: center;
+}
+
+.splash-content h1 {
+    font-size: 80px;
+    margin-bottom: 50px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+@keyframes blink {
+    0% { opacity: 2;}
+    50% { opacity: 0;}
+    100% { opacity: 2;}
+}
+
+.blinking-text {
+    font-size: 20px;
+    animation: blink 2s infinite;
+}
+
+#main-content {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+
+#movie-header h1 {
+   font-size: 7rem;
+   line-height: 1;
+   margin-top: 0;
+   margin-bottom: 0.5rem;
+   color: #ec66a4;
+}
+
+.header-info {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    color: #aaaaaa;
+    margin: 0.5rem;
+}
+
+#sypnosis h2 {
+    font-family: 'FightThis';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4rem;
+    color: #ec66a4;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+#sypnosis p {
+    font-family: Arial;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    color: whitesmoke;
+}
+
+#characters h2 {
+    font-family: 'FightThis';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4rem;
+    color: #ec66a4;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.character-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    margin-left: -8rem;
+}
+
+.character-description {
+    flex: 1;
+    max-width: 40%;
+    line-height: 1.5;
+    font-size: 1.1rem;
+}
+
+.character-visuals {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    flex: 1;
+    max-width: 55%;
+}
+
+.character-image-box {
+    flex-shrink: 0;
+    width: 250px;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-details {
+    color: whitesmoke;
+    line-height: 2;
+}
+
+.character-details h3 {
+    padding-left: 2.5rem;
+}
+
+.character-details ul li {
+    white-space: nowrap; 
+}
+
+.character-description.tyler {
+    flex: 1;
+    max-width: 40%;
+    line-height: 1.5;
+    font-size: 1.1rem;
+}
+
+.character-visuals.tyler {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    flex: 1;
+    max-width: 50%;
+}
+
+.character-image-box.tyler {
+    flex-shrink: 0;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -50px;
+}
+
+.character-details.tyler {
+    color: whitesmoke;
+    line-height: 2;
+    margin-left: -50px;
+    margin-top: 5px;
+    font-family: arial;
+    font-size: 1.1rem;
+}
+
+.character-details h4 {
+    padding-left: 2.5rem;
+}
+
+.character-details.tyler ul li {
+    white-space: nowrap; 
+}
+
+#characters {
+    margin-bottom: 6rem;
+}
+
+#tyler-durden {
+    margin-top: 6rem;
+}
+
+#rules-section {
+    padding-top: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#rules-display {
+    min-height: 200px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.fight-rule {
+    font-family: 'FightThis';
+    color: whitesmoke;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    display: block;
+    opacity: 0;
+    padding: 0.5rem 0;
+}
+
+.fight-rule.visible {
+    opacity: 1;
+}
+
+.button-container {
+    margin-top: -5rem;
+}
+
+#reveal-rule-btn {
+    background-color: transparent;
+    border: none;
+    color: whitesmoke;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: Arial;
+}
+
+#reveal-rule-btn:focus,
+#reveal-rule-btn:active {
+    outline: none;
+    border: none;
+}
+
+#rules-section h5 {
+    font-family: 'FightThis';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4rem;
+    color: #ec66a4;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#punch-effect-container { 
+    position: absolute; 
+    width: 100px; 
+    height: 100px;
+    transform: translate(-50%, -50%); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none; 
+    opacity: 0; 
+    transition: opacity 0.3s ease-out; 
+    z-index: 9998; 
+}
+
+#punch-effect-container.visible {
+    opacity: 1;
+    transition: none; 
+}
+
+#soap-fall-area {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.falling-soap {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: url('soap.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fallAndSway linear infinite;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease-out;
+}
+
+.soap-fade-out {
+    opacity: 0 !important;
+}
+
+@keyframes fallAndSway {
+    0% {
+          transform: translate(0, -100px) rotate(0deg);
+          opacity: 1;
+    }
+
+    100% {
+        transform: translate(0, 100vh) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+#destroy-section {
+    text-align: center;
+    padding: 4rem 0 6rem 0; 
+}
+
+#destroy-mode-btn {
+    font-family: 'FightThis', serif;
+    font-size: 4rem;
+    color: #ec66a4; 
+    background-color: transparent;
+    border: none; 
+    padding: 10px 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.2s;
+    margin-top: 100px;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translate(0, 0) rotate(0); }
+    10% { transform: translate(-2px, -3px) rotate(-0.5deg); }
+    20% { transform: translate(3px, 0px) rotate(0.8deg); }
+    30% { transform: translate(-3px, 2px) rotate(1deg); }
+    40% { transform: translate(2px, -1px) rotate(-1.2deg); }
+    50% { transform: translate(-1px, 3px) rotate(0.5deg); }
+    60% { transform: translate(4px, -2px) rotate(1.5deg); }
+    70% { transform: translate(-2px, 2px) rotate(-0.5deg); }
+    80% { transform: translate(1px, -3px) rotate(0.8deg); }
+    90% { transform: translate(-3px, 1px) rotate(-1deg); }
+}
+
+.destroy-mode-active {
+    animation: shake 0.1s linear infinite; 
+}
+
+.destroy-mode-active h1,
+.destroy-mode-active h2,
+.destroy-mode-active h5,
+.destroy-mode-active .fight-rule,
+.destroy-mode-active .character-image-box {
+    animation: shake 0.1s linear infinite;
+}
