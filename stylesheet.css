@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'FightThis';
-    src: url('FightThis.woff2') format('woff2'),
-        url('FightThis.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
